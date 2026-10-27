@@ -1,6 +1,9 @@
 package com.youfu;
 
+import lombok.Data;
+
 @Component()
+@Data
 public class Person {
     @Value("xiaohua")
     String name;
@@ -8,45 +11,4 @@ public class Person {
     int age;
     @Autowired
     Animal animal;
-
-    public Person() {
-    }
-
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public Animal getAnimal() {
-        return animal;
-    }
-
-    public void setAnimal(Animal animal) {
-        this.animal = animal;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", animal=" + animal +
-                '}';
-    }
 }
